@@ -1,0 +1,48 @@
+[alias]
+
+    a   = commit --amend
+    br  = branch
+    c   = commit
+    ca  = !git add -A && git commit                 # Commit all changes
+    co  = checkout
+    cp  = cherry-pick
+    d   = diff
+    i   = install
+    uni = unistall
+    dc  = diff --cached
+    g   = log --graph --pretty=custom               # Show custom graph
+    l   = log --pretty=custom                       # Show custom log
+    lc  = shortlog --summary --numbered             # List contributors
+    rlc = reset --hard HEAD~1                       # Remove last commit
+    s   = status
+    ulc = reset --soft HEAD~1                       # Undo last commit
+
+[color "branch"]
+
+    current = green bold
+    local = green
+    remote = yellow
+
+[color "diff"]
+
+    frag = magenta
+    meta = yellow
+    new = green
+    old = red
+
+[color "status"]
+
+    added = green reverse
+    changed = yellow reverse
+    untracked = red reverse
+
+[core]
+
+	autocrlf = input
+
+[push]
+
+    # Make `git push` automatically push relevant
+    # annotated tags when pushing branches out
+
+    followTags = true
